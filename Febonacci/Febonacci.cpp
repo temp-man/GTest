@@ -1,22 +1,25 @@
 #include "Febonacci.h"
 
-int get_febonacci (int index)
+namespace math
 {
-	int prev_value = 1;
-	int current_value = 1;
-
-	if (index == 0)
-		return prev_value;
-
-	if (index == 1)
-		return current_value;
-
-	for (int i = 2; i <= index; i++)
+	int get_febonacci (int index)
 	{
-		int next = current_value + prev_value;
-		prev_value = current_value;
-		current_value = next;
-	}
+		int prev_value = 1;
+		int current_value = 1;
 
-	return current_value;
+		if (index == 0)
+			return prev_value;
+
+		if (index == 1)
+			return current_value;
+
+		for (int i = 2; i <= index; i++)
+		{
+			int next = current_value + prev_value;
+			prev_value = current_value;
+			current_value = next;
+		}
+
+		return current_value;
+	}
 }
