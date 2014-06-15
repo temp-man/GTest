@@ -11,6 +11,7 @@ namespace calc
 		typedef unsigned char type;
 
 		action (type id) : id (id) {}
+		virtual ~action () {} 
 
 		/// @brief do action.
 		/// @param n count of arguments.
