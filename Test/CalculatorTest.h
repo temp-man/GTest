@@ -26,6 +26,7 @@ namespace calc
 			ASSERT_EQ (expected, result);
 		}
 
+		/// @brief mock for action class.
 		class fake_action : public action<int>
 		{
 		public:
