@@ -8,6 +8,7 @@
 
 namespace calc
 {
+	/// @brief calculator class.
 	template <typename T>
 	class calculator
 	{

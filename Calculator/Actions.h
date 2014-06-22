@@ -6,6 +6,7 @@
 
 namespace calc
 {
+	/// @brief suported actions types.
 	enum action_type
 	{
 		add,
@@ -14,6 +15,7 @@ namespace calc
 		div
 	};
 
+	/// @brief class realize action by delegate.
 	template <typename T>
 	class configurable_action : public action<T>
 	{
@@ -34,6 +36,7 @@ namespace calc
 		processor action_processor;
 	};
 
+	/// @brief macro generate little factori functions for actions.
 #define CREATE_ACTION(name, count, operation) \
 	template <typename T> \
 	configurable_action<T> *create_##name##_action () \
@@ -54,6 +57,7 @@ namespace calc
 
 	CREATE_ACTION (div, 2, args[0] / args[1])
 
+	/// @brief factory method for actions.
 	template <typename T>
 	configurable_action<T> *create_action (action_type type)
 	{
