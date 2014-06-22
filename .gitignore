@@ -138,6 +138,9 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 
+#doxygen files
+Doxyfile
+
 # =========================
 # Windows detritus
 # =========================
